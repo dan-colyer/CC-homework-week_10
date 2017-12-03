@@ -51,4 +51,11 @@ public class ShoppingBasket {
         }
         return totalValue;
     }
+
+    public double totalValueBogofGreaterThanTwenty() {
+        if (totalValueBogof() > 20) {
+            return totalValueBogof() * 0.9;
+        }
+        else return totalValueBogof();
+    }
 }
