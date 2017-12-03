@@ -29,4 +29,11 @@ public class ShoppingBasketTest {
     public void testGetShoppingBasketItems() {
         assertEquals(1, basket1.getItems().size());
     }
+
+    @Test
+    public void testShoppingBasketStartsEmpty() {
+        ArrayList<Buyable> testItems = new ArrayList<>();
+        ShoppingBasket basketTest = new ShoppingBasket(testItems);
+        assertEquals(0, basketTest.getItems().size());
+    }
 }
