@@ -61,4 +61,10 @@ public class CustomerTest {
         assertEquals(false, customer1.getHasLoyaltyCard());
     }
 
+    @Test
+    public void testSetHasLoyaltyCard() {
+        customer1.setHasLoyaltyCard(true);
+        assertEquals(true, customer1.getHasLoyaltyCard());
+    }
+
 }

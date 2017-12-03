@@ -35,4 +35,8 @@ public class Customer {
     public boolean getHasLoyaltyCard() {
         return this.hasLoyaltyCard;
     }
+
+    public void setHasLoyaltyCard(boolean value) {
+        this.hasLoyaltyCard = value;
+    }
 }
