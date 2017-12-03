@@ -50,4 +50,10 @@ public class CustomerTest {
         assertEquals(0, customer1.getBoughtItems().size());
     }
 
+    @Test
+    public void testClearBoughtItems() {
+        customer1.clearBoughtItems();
+        assertEquals(0, customer1.getBoughtItems().size());
+    }
+
 }

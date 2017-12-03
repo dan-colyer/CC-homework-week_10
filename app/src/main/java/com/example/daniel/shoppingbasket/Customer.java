@@ -25,4 +25,8 @@ public class Customer {
     public void removeBoughtItem(Buyable item) {
         this.boughtItems.remove(item);
     }
+
+    public void clearBoughtItems() {
+        this.boughtItems.clear();
+    }
 }
