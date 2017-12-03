@@ -55,4 +55,11 @@ public class ShoppingBasketTest {
         basket1.clearBasket();
         assertEquals(0, basket1.getItems().size());
     }
+
+    @Test
+    public void testTotalValueOfShoppingBasket() {
+        Item item2 = new Item("magazine", 5.00);
+        basket1.addItem(item2);
+        assertEquals(15.00, basket1.totalValue(), 0.01);
+    }
 }

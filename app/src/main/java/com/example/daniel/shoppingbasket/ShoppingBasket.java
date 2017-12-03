@@ -29,4 +29,12 @@ public class ShoppingBasket {
     public void clearBasket() {
         this.items.clear();
     }
+
+    public double totalValue() {
+        double totalValue = 0;
+        for (Buyable eachItem : items) {
+            totalValue += eachItem.getPrice();
+        }
+        return totalValue;
+    }
 }
