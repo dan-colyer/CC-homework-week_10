@@ -8,6 +8,6 @@ public interface Buyable {
 
     String getName();
     void setName(String name);
-//    double getPrice();
+    double getPrice();
 //    void setPrice();
 }

@@ -28,4 +28,9 @@ public class ItemTest {
         item1.setName("magazine");
         assertEquals("magazine", item1.getName());
     }
+
+    @Test
+    public void testGetPrice() {
+        assertEquals(10.00, item1.getPrice(), 0.01);
+    }
 }

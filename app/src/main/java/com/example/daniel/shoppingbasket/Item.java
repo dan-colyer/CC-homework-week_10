@@ -23,4 +23,8 @@ public class Item implements Buyable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public double getPrice() {
+        return price;
+    }
 }
