@@ -17,4 +17,8 @@ public class ShoppingBasket {
     public ArrayList<Buyable> getItems() {
         return items;
     }
+
+    public void addItem(Buyable item) {
+        this.items.add(item);
+    }
 }

@@ -36,4 +36,11 @@ public class ShoppingBasketTest {
         ShoppingBasket basketTest = new ShoppingBasket(testItems);
         assertEquals(0, basketTest.getItems().size());
     }
+
+    @Test
+    public void testAddToBasket() {
+        Item item2 = new Item("magazine", 5.00);
+        basket1.addItem(item2);
+        assertEquals(2, basket1.getItems().size());
+    }
 }
