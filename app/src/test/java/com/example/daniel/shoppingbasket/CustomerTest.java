@@ -22,7 +22,7 @@ public class CustomerTest {
         ArrayList<Buyable> testBoughtItems = new ArrayList<>();
         testBoughtItems.add(item1);
 
-        customer1 = new Customer(testBoughtItems);
+        customer1 = new Customer(testBoughtItems, false);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class CustomerTest {
     @Test
     public void testBoughtItemsStartsEmpty() {
         ArrayList<Buyable> test2BoughtItems = new ArrayList<>();
-        Customer customer2 = new Customer(test2BoughtItems);
+        Customer customer2 = new Customer(test2BoughtItems, false);
         assertEquals(0, customer2.getBoughtItems().size());
     }
 
@@ -54,6 +54,11 @@ public class CustomerTest {
     public void testClearBoughtItems() {
         customer1.clearBoughtItems();
         assertEquals(0, customer1.getBoughtItems().size());
+    }
+
+    @Test
+    public void testGetHasLoyaltyCard() {
+        assertEquals(false, customer1.getHasLoyaltyCard());
     }
 
 }

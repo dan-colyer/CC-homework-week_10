@@ -9,9 +9,11 @@ import java.util.ArrayList;
 public class Customer {
 
     private ArrayList<Buyable> boughtItems;
+    private boolean hasLoyaltyCard;
 
-    public Customer(ArrayList<Buyable> boughtItems) {
+    public Customer(ArrayList<Buyable> boughtItems, boolean hasLoyaltyCard) {
         this.boughtItems = boughtItems;
+        this.hasLoyaltyCard = hasLoyaltyCard;
     }
 
     public ArrayList<Buyable> getBoughtItems() {
@@ -28,5 +30,9 @@ public class Customer {
 
     public void clearBoughtItems() {
         this.boughtItems.clear();
+    }
+
+    public boolean getHasLoyaltyCard() {
+        return this.hasLoyaltyCard;
     }
 }
