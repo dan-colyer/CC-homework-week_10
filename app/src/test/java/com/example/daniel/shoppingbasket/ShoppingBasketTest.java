@@ -49,4 +49,10 @@ public class ShoppingBasketTest {
         basket1.removeItem(item1);
         assertEquals(0, basket1.getItems().size());
     }
+
+    @Test
+    public void testClearBasket() {
+        basket1.clearBasket();
+        assertEquals(0, basket1.getItems().size());
+    }
 }
