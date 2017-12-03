@@ -17,4 +17,8 @@ public class Customer {
     public ArrayList<Buyable> getBoughtItems() {
         return boughtItems;
     }
+
+    public void addBoughtItem(Buyable item) {
+        this.boughtItems.add(item);
+    }
 }

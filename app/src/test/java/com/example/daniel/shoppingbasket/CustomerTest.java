@@ -37,4 +37,11 @@ public class CustomerTest {
         assertEquals(0, customer2.getBoughtItems().size());
     }
 
+    @Test
+    public void testAddBoughtItem() {
+        Item item2 = new Item("magazine", 5.00);
+        customer1.addBoughtItem(item2);
+        assertEquals(2, customer1.getBoughtItems().size());
+    }
+
 }
