@@ -21,4 +21,8 @@ public class Customer {
     public void addBoughtItem(Buyable item) {
         this.boughtItems.add(item);
     }
+
+    public void removeBoughtItem(Buyable item) {
+        this.boughtItems.remove(item);
+    }
 }

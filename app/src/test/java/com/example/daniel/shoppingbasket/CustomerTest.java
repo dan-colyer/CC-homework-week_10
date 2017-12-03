@@ -44,4 +44,10 @@ public class CustomerTest {
         assertEquals(2, customer1.getBoughtItems().size());
     }
 
+    @Test
+    public void testRemoveBoughtItem() {
+        customer1.removeBoughtItem(item1);
+        assertEquals(0, customer1.getBoughtItems().size());
+    }
+
 }
