@@ -100,20 +100,23 @@ public class ShoppingBasketTest {
     }
 
 
-//    @Test
-//    public void testTotalValueOfShoppingBasket_BOGOF_LoyaltyDiscount() {
-//        Item item2 = new Item("magazine", 5.00);
-//        Item item3 = new Item("magazine", 6.00);
-//        Item item4 = new Item("magazine", 7.00);
-//        Item item5 = new Item("magazine", 8.00);
-//
-//        basket1.addItem(item2);
-//        basket1.addItem(item3);
-//        basket1.addItem(item4);
-//        basket1.addItem(item5);
-//
-//        assertEquals(24.00, basket1.totalValueBogofLoyaltyDiscount(), 0.01);
-//    }
+    @Test
+    public void testTotalValueOfShoppingBasket_BOGOF_TotalGreaterThanTwentyDiscount_LoyaltyDiscount() {
+        Item item2 = new Item("magazine", 5.00);
+        Item item3 = new Item("magazine", 6.00);
+        Item item4 = new Item("magazine", 7.00);
+        Item item5 = new Item("magazine", 8.00);
+
+        basket1.addItem(item2);
+        basket1.addItem(item3);
+        basket1.addItem(item4);
+        basket1.addItem(item5);
+
+        ArrayList<Buyable> testBoughtItems = new ArrayList<>();
+        Customer customer1 = new Customer(testBoughtItems, true);
+
+        assertEquals(21.17, basket1.totalValueBogofGreaterThanTwentyLoyaltyDiscount(customer1), 0.01);
+    }
 
 
 }

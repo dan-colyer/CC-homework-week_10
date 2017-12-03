@@ -58,4 +58,12 @@ public class ShoppingBasket {
         }
         else return totalValueBogof();
     }
+
+    public double totalValueBogofGreaterThanTwentyLoyaltyDiscount(Customer customer) {
+
+        if (customer.getHasLoyaltyCard() == true) {
+            return totalValueBogofGreaterThanTwenty() * 0.98;
+        }
+        else return totalValueBogofGreaterThanTwenty();
+    }
 }
