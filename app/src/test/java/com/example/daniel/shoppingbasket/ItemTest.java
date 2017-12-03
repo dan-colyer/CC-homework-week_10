@@ -1,5 +1,6 @@
 package com.example.daniel.shoppingbasket;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
@@ -10,11 +11,21 @@ import static junit.framework.Assert.assertEquals;
 
 public class ItemTest {
 
-    Item item;
+    Item item1;
+
+    @Before
+    public void before() {
+        item1 = new Item("book", 10.00);
+    }
 
     @Test
     public void testGetName() {
-        Item item1 = new Item("book", 10.00);
         assertEquals("book", item1.getName());
+    }
+
+    @Test
+    public void testSetName() {
+        item1.setName("magazine");
+        assertEquals("magazine", item1.getName());
     }
 }

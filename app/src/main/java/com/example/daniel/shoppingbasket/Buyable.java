@@ -7,7 +7,7 @@ package com.example.daniel.shoppingbasket;
 public interface Buyable {
 
     String getName();
-//    void setName();
+    void setName(String name);
 //    double getPrice();
 //    void setPrice();
 }
