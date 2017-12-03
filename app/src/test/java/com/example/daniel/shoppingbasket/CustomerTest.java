@@ -30,4 +30,11 @@ public class CustomerTest {
         assertEquals(1, customer1.getBoughtItems().size());
     }
 
+    @Test
+    public void testBoughtItemsStartsEmpty() {
+        ArrayList<Buyable> test2BoughtItems = new ArrayList<>();
+        Customer customer2 = new Customer(test2BoughtItems);
+        assertEquals(0, customer2.getBoughtItems().size());
+    }
+
 }
