@@ -62,4 +62,20 @@ public class ShoppingBasketTest {
         basket1.addItem(item2);
         assertEquals(15.00, basket1.totalValue(), 0.01);
     }
+
+    @Test
+    public void testTotalValueOfShoppingBasket_BOGOF() {
+        Item item2 = new Item("magazine", 5.00);
+        Item item3 = new Item("magazine", 6.00);
+        Item item4 = new Item("magazine", 7.00);
+        Item item5 = new Item("magazine", 8.00);
+
+        basket1.addItem(item2);
+        basket1.addItem(item3);
+        basket1.addItem(item4);
+        basket1.addItem(item5);
+
+        assertEquals(24.00, basket1.totalValueBogof(), 0.01);
+    }
+
 }

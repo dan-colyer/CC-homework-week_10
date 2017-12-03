@@ -37,4 +37,18 @@ public class ShoppingBasket {
         }
         return totalValue;
     }
+
+    public double totalValueBogof() {
+        int index = -1;
+        double totalValue = 0;
+
+        for (Buyable eachItem : items) {
+
+            index++;
+
+            if (index % 2 == 0)
+            totalValue += eachItem.getPrice();
+        }
+        return totalValue;
+    }
 }
